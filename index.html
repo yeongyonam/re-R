@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>re‑R Lab | Sunmoon University</title>
+  <meta name="description" content="Official website of re‑R Lab (Rehabilitation & Research) at Sunmoon University. Digital therapeutics, neuroscience, and physical therapy research." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#0b1021;
+      --muted:#5a637a;
+      --brand:#2b6ef5;
+      --surface:#f5f7fb;
+      --card:#ffffff;
+      --border:#e7ebf3;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(11,16,33,0.08);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    header.site{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(255,255,255,0.8);backdrop-filter:blur(8px);z-index:10}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#7aa6ff);display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:var(--shadow)}
+    .brand h1{font-size:18px;line-height:1.2;margin:0}
+    nav a{margin:0 10px;color:var(--muted);font-weight:600}
+    nav a:hover{color:var(--ink)}
+    .hero{padding:64px 24px 32px;background:linear-gradient(180deg,#f7faff,transparent)}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px;align-items:center}
+    .hero h2{font-size:40px;line-height:1.15;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;background:var(--ink);color:white;padding:12px 18px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    section{padding:28px 24px}
+    section h3{margin:0 0 10px;font-size:24px}
+    .muted{color:var(--muted)}
+    ul.clean{padding-left:18px;margin:10px 0}
+    .pill{display:inline-block;border:1px solid var(--border);padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;color:var(--muted);font-weight:600}
+    .news-item{padding:12px 0;border-bottom:1px dashed var(--border)}
+    .people .person{display:flex;gap:14px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:50%;background:var(--surface);border:1px solid var(--border)}
+    footer{border-top:1px solid var(--border);padding:28px 24px;color:var(--muted);font-size:14px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:var(--surface);border:1px solid var(--border);padding:2px 6px;border-radius:6px}
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">re‑R</div>
+      <h1>re‑R Lab <span class="muted">· Sunmoon University</span></h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#people">People</a>
+      <a href="#publications">Publications</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h2>Digital Therapeutics for Rehabilitation</h2>
+        <p>We design and evaluate evidence‑based digital therapeutics (DTx) to improve function and quality of life—especially for older adults—at the intersection of neuroscience, physical therapy, and human‑centered design.</p>
+        <a class="cta" href="#contact">Join / Collaborate</a>
+        <div style="margin-top:10px" class="muted">📍 Asan, Republic of Korea · Department of Physical Therapy</div>
+      </div>
+      <div class="card">
+        <strong>Quick links</strong>
+        <ul class="clean">
+          <li><a href="#publications">Latest publications</a></li>
+          <li><a href="#projects">Ongoing projects</a></li>
+          <li><a href="#openings">Open positions</a></li>
+        </ul>
+        <div style="margin-top:8px">
+          <span class="pill">DTx</span>
+          <span class="pill">Rehabilitation</span>
+          <span class="pill">Neuroscience</span>
+          <span class="pill">Aging</span>
+          <span class="pill">UX for Elders</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap grid cols-2">
+      <div class="card">
+        <h3>About</h3>
+        <p>re‑R (Rehabilitation & Research) Lab advances digital therapeutics for musculoskeletal and cognitive rehabilitation. We prototype clinically grounded interventions, run pragmatic trials, and translate findings into usable products for patients and clinicians.</p>
+        <p class="muted">Focus: knee/neck/shoulder/back/hip DTx, adherence analytics, and accessibility for digitally inexperienced older adults.</p>
+      </div>
+      <div class="card" id="projects">
+        <h3>Ongoing Projects</h3>
+        <ul class="clean">
+          <li><strong>re‑R Knee</strong> — post‑TKR home rehabilitation DTx trial (RCT, usability, adherence)</li>
+          <li><strong>Screen Behavior & Cognition</strong> — TV viewing patterns and cognitive/affective outcomes in the elderly</li>
+          <li><strong>Elder‑first UX</strong> — voice/question‑based interfaces for low digital literacy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <h3>Research Areas</h3>
+      <div class="grid cols-3">
+        <div class="card">
+          <strong>Digital Therapeutics</strong>
+          <p class="muted">Evidence‑based protocols, dosing, and remote monitoring for orthopedic rehab.</p>
+        </div>
+        <div class="card">
+          <strong>Neuroscience & Motor Control</strong>
+          <p class="muted">Cognition‑movement interactions, adherence, and feedback modalities.</p>
+        </div>
+        <div class="card">
+          <strong>Human‑Centered Design</strong>
+          <p class="muted">Elder‑friendly UI/UX, accessibility, and engagement analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="people" class="people">
+    <div class="wrap">
+      <h3>People</h3>
+      <div class="card person">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <strong>Prof. Yeongyo Nam (남연교)</strong> — PI, Department of Physical Therapy, Sunmoon University<br/>
+          <span class="muted">Neuroscience · Physical Therapy · Digital Health</span>
+        </div>
+      </div>
+      <div class="grid cols-2" style="margin-top:14px">
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <strong>Graduate Student Name</strong> — MS/PhD Candidate<br/>
+            <span class="muted">Project: re‑R Knee</span>
+          </div>
+        </div>
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <strong>Research Assistant Name</strong><br/>
+            <span class="muted">Project: Elder‑first UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap">
+      <h3>Selected Publications</h3>
+      <div class="card">
+        <ul class="clean">
+          <li><strong>Nam Y</strong>, et al. “Correlational Analysis of TV Viewing Patterns and Health Outcomes in the Elderly Living Alone.” <em>(Manuscript)</em>, 2025.</li>
+          <li><strong>Nam Y</strong>, et al. “Impact of TV Program Types on Depression in Elderly Individuals: A Regression Analysis.” <em>(Manuscript)</em>, 2025.</li>
+          <li><strong>Nam Y</strong>, et al. “Psychological and Performance Effects of Auditory Feedback in Recreational Runners…” <em>(In preparation)</em></li>
+        </ul>
+        <p class="muted" style="margin-top:8px">Tip: Replace with your official citations; you can also link to Google Scholar or ORCID.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="wrap">
+      <h3>News</h3>
+      <div class="card news-item"><strong>[2025-08-12]</strong> re‑R Lab website launched.</div>
+      <div class="card news-item"><strong>[YYYY‑MM‑DD]</strong> Add your latest grant/acceptance/event here.</div>
+    </div>
+  </section>
+
+  <section id="openings">
+    <div class="wrap">
+      <h3>Open Positions</h3>
+      <div class="card">
+        We welcome motivated MS/PhD students and collaborators. Email a brief CV and interests.
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap grid cols-2">
+      <div class="card">
+        <h3>Contact</h3>
+        <p><strong>Email:</strong> <a href="mailto:nyg3583@hanmail.net">nyg3583@hanmail.net</a><br/>
+        <strong>Department:</strong> Physical Therapy, Sunmoon University<br/>
+        <strong>Address:</strong> Asan, Chungcheongnam‑do, Republic of Korea</p>
+      </div>
+      <div class="card">
+        <h3>Links</h3>
+        <ul class="clean">
+          <li><a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a></li>
+          <li><a href="https://orcid.org/" target="_blank" rel="noopener">ORCID</a></li>
+          <li><a href="mailto:nyg3583@hanmail.net">Email the lab</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> re‑R Lab · Sunmoon University — Built with GitHub Pages
+      <div>To edit this site, open <span class="kbd">index.html</span> in your repository.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

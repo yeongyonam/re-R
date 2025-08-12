@@ -1,0 +1,6 @@
+- name: Google Scholar
+  url: https://scholar.google.com/
+- name: ORCID
+  url: https://orcid.org/
+- name: Email the lab
+  url: mailto:nyg3583@hanmail.net

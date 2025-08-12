@@ -1,16 +1,20 @@
-# re‑R Lab Website
+# re-R Lab Website (Jekyll + Data)
 
-This repository hosts the official website for **re‑R Lab (Rehabilitation & Research)** at **Sunmoon University**.
+**Edit content without touching HTML.** Update YAML files in `_data/` via the GitHub web editor. Upload photos to `assets/uploads/`.
 
-## How to publish (GitHub Pages)
-1. Go to **Settings → Pages**.
-2. Under **Build and deployment → Source**, choose **Branch: main** and **Folder: /(root)**, then **Save**.
-3. Upload `index.html` to the repository root (already included here).
-4. Access your site at: `https://<your-id>.github.io/<repository-name>`.
+## Publish on GitHub Pages
+1. Upload all files to your repository root.
+2. Settings → Pages → Source: **Branch = main**, **Folder = /(root)**.
+3. Open: `https://<your-id>.github.io/<repository-name>`.
 
-## Edit the site
-- Open `index.html` and replace placeholder content (People, Publications, News, Contact).
-- You can keep this as a single-file site (easy) or split into multiple pages later.
+## Edit content
+- People: `_data/people.yml`
+- Publications: `_data/publications.yml`
+- News: `_data/news.yml`
+- Projects: `_data/projects.yml`
+- Research areas: `_data/areas.yml`
+- Lab basics: `_data/lab.yml`
+- Photos: `assets/uploads/` (e.g., `/assets/uploads/nam-profile.jpg`)
 
-## Custom domain (optional)
-- Buy a domain (e.g., `rerlab.com`) from a registrar, then follow GitHub Pages docs to configure DNS.
+## Project site note
+If your site is `https://<id>.github.io/re-R`, set `_config.yml` → `baseurl: "/re-R"`.

@@ -6,7 +6,7 @@
 - name: Graduate Student Name
   role: MS/PhD Candidate
   meta: Project: re-R Knee
-  photo:
+  photo: /assets/uploads/nam-profile.jpg
 
 - name: Research Assistant Name
   role: Research Assistant

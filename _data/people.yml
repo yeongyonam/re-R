@@ -1,13 +1,19 @@
-- name: Prof. Yeongyo Nam (남연교)
+- name: Prof. Yeongyo Nam
   role: PI, Department of Physical Therapy
   meta: Neuroscience · Physical Therapy · Digital Health
   photo: /assets/uploads/nam-profile.jpg
 
-- name: Graduate Student Name
-  role: MS/PhD Candidate
+- name: SungYeon Oh
+  role: Ph.D. Student, Researcher
   meta: Project: re-R Knee
   photo: /assets/uploads/
+  
+- name: SeoHa Jeong
+  role: M.S. Student, Researcher
+  meta: Project: Elder-first UX
+  photo:
+
 - name: Research Assistant Name
-  role: Research Assistant
+  role: M.S. Student, Researcher
   meta: Project: Elder-first UX
   photo:

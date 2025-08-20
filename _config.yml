@@ -1,6 +1,6 @@
 title: re-R Lab
 description: Digital therapeutics & rehabilitation research
-url: "https://yeongyonam.github.io/re-R/"
+url: "https://yeongyonam.github.io"
 baseurl: "/re-R"
 plugins:
   - jekyll-feed

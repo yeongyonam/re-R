@@ -96,10 +96,18 @@ layout: null
       </ul></div>
     </div>
   </section>
-  <section id="news">
-    <div class="wrap"><h3>News</h3>
-      {% for item in site.data.news %}<div class="card news-item"><strong>[{{ item.date }}]</strong> {{ item.text }}</div>{% endfor %}
-    </div>
+ <section id="news" class="news-section">
+  <h2>News</h2>
+  {% assign items = site.data.news | sort: 'date' | reverse %}
+  {% for item in items %}
+    <details class="news-item">
+      <summary>
+        [{{ item.date }}] {{ item.title }}
+      </summary>
+      <p>{{ item.desc }}</p>
+      <p><a href="{{ item.link }}" target="_blank" rel="noopener">Read the article</a></p>
+    </details>
+  {% endfor %}
   </section>
   <section id="openings">
     <div class="wrap"><h3>Open Positions</h3><div class="card">{{ site.data.lab.openings | default: "We welcome motivated MS/PhD students and collaborators. Email a brief CV and interests." }}</div></div>

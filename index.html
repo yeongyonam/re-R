@@ -1,30 +1,33 @@
----
-layout: null
----
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ site.title }} | Sunmoon University</title>
 
-<meta name="description" content="선문대학교 물리치료학과 남연교 교수 연구실 · Digital Therapeutics, Rehabilitation, Cognitive Training">
-<meta name="keywords" content="남연교, 선문대학교, 물리치료학과, 재활, Digital Therapeutics, Rehabilitation, Cognitive Training">
-<meta name="author" content="남연교">
+  <!-- 기본 SEO -->
+  <meta name="description" content="선문대학교 물리치료학과 남연교 교수 연구실 · Digital Therapeutics, Rehabilitation, Cognitive Training">
+  <meta name="keywords" content="남연교, 선문대학교, 물리치료학과, 재활, Digital Therapeutics, Rehabilitation, Cognitive Training">
+  <meta name="author" content="남연교">
 
-<meta property="og:title" content="남연교 교수 연구실 · re-R Project">
-<meta property="og:description" content="선문대학교 물리치료학과 남연교 교수 연구실 · Digital Therapeutics & Rehabilitation">
-<meta property="og:image" content="https://yeongyonam.github.io/re-R/assets/uploads/logo.png">
-<meta property="og:url" content="https://yeongyonam.github.io/re-R/">
-<meta property="og:type" content="website">
+  <!-- Open Graph -->
+  <meta property="og:title" content="남연교 교수 연구실 · re-R Project">
+  <meta property="og:description" content="선문대학교 물리치료학과 남연교 교수 연구실 · Digital Therapeutics & Rehabilitation">
+  <meta property="og:image" content="https://yeongyonam.github.io/re-R/assets/uploads/logo.png">
+  <meta property="og:url" content="https://yeongyonam.github.io/re-R/">
+  <meta property="og:type" content="website">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="남연교 교수 연구실 · re-R Project">
-<meta name="twitter:description" content="Digital Therapeutics & Rehabilitation">
-<meta name="twitter:image" content="https://yeongyonam.github.io/re-R/assets/uploads/logo.png">
-<meta name="google-site-verification" content="TNBSUoDc-UDpoSOAk6wVwKCnul1S4MwPYMVWaWok_H0" />
-<meta name="naver-site-verification" content="f82ad5ed8e6677bbfcd099b5894f48bf7a2d6cb4" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="남연교 교수 연구실 · re-R Project">
+  <meta name="twitter:description" content="Digital Therapeutics & Rehabilitation">
+  <meta name="twitter:image" content="https://yeongyonam.github.io/re-R/assets/uploads/logo.png">
 
+  <!-- Google & Naver Verification -->
+  <meta name="google-site-verification" content="구글에서받은코드" />
+  <meta name="naver-site-verification" content="네이버에서받은코드" />
+
+  <!-- 스타일 -->
   <style>
     :root{--bg:#fff;--ink:#0b1021;--muted:#5a637a;--brand:#2b6ef5;--surface:#f5f7fb;--card:#fff;--border:#e7ebf3;--radius:16px;--shadow:0 10px 30px rgba(11,16,33,0.08);--max:1100px;}
     *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.6}
@@ -60,6 +63,7 @@ layout: null
     <div class="brand"><div class="logo" aria-hidden="true">re-R</div><h1>{{ site.title }} <span class="muted">· Sunmoon University</span></h1></div>
     <nav><a href="#about">About</a><a href="#research">Research</a><a href="#people">People</a><a href="#publications">Publications</a><a href="#news">News</a><a href="#contact">Contact</a></nav>
   </header>
+
   <div class="hero">
     <div class="wrap">
       <div>
@@ -70,11 +74,20 @@ layout: null
       </div>
       <div class="card">
         <strong>Quick links</strong>
-        <ul class="clean"><li><a href="#publications">Latest publications</a></li><li><a href="#projects">Ongoing projects</a></li><li><a href="#openings">Open positions</a></li></ul>
-        <div style="margin-top:8px">{% for tag in site.data.lab.tags %}<span class="pill">{{ tag }}</span>{% endfor %}</div>
+        <ul class="clean">
+          <li><a href="#publications">Latest publications</a></li>
+          <li><a href="#projects">Ongoing projects</a></li>
+          <li><a href="#openings">Open positions</a></li>
+        </ul>
+        <div style="margin-top:8px">
+          {% for tag in site.data.lab.tags %}
+            <span class="pill">{{ tag }}</span>
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
+
   <section id="about">
     <div class="wrap grid cols-2">
       <div class="card">
@@ -84,59 +97,105 @@ layout: null
       </div>
       <div class="card" id="projects">
         <h3>Ongoing Projects</h3>
-        <ul class="clean">{% for p in site.data.projects %}<li><strong>{{ p.name }}</strong> — {{ p.desc }}</li>{% endfor %}</ul>
+        <ul class="clean">
+          {% for p in site.data.projects %}
+          <li><strong>{{ p.name }}</strong> — {{ p.desc }}</li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </section>
+
   <section id="research">
-    <div class="wrap"><h3>Research Areas</h3>
-      <div class="grid cols-3">{% for a in site.data.areas %}<div class="card"><strong>{{ a.title }}</strong><p class="muted">{{ a.text }}</p></div>{% endfor %}</div>
+    <div class="wrap">
+      <h3>Research Areas</h3>
+      <div class="grid cols-3">
+        {% for a in site.data.areas %}
+        <div class="card"><strong>{{ a.title }}</strong><p class="muted">{{ a.text }}</p></div>
+        {% endfor %}
+      </div>
     </div>
   </section>
+
   <section id="people" class="people">
-    <div class="wrap"><h3>People</h3>
+    <div class="wrap">
+      <h3>People</h3>
       {% for person in site.data.people %}
       <div class="card person">
-        {% if person.photo %}<img class="avatar" src="{{ person.photo | relative_url }}" alt="{{ person.name }} photo"/>{% else %}<div class="avatar" aria-hidden="true"></div>{% endif %}
+        {% if person.photo %}
+          <img class="avatar" src="{{ person.photo | relative_url }}" alt="{{ person.name }} photo"/>
+        {% else %}
+          <div class="avatar" aria-hidden="true"></div>
+        {% endif %}
         <div><strong>{{ person.name }}</strong>{% if person.role %} — {{ person.role }}{% endif %}<br/>{% if person.meta %}<span class="muted">{{ person.meta }}</span>{% endif %}</div>
       </div>
       {% endfor %}
     </div>
   </section>
+
   <section id="publications">
-    <div class="wrap"><h3>Selected Publications</h3>
-      <div class="card"><ul class="clean">
-        {% for pub in site.data.publications %}
-        <li>{% if pub.authors %}{{ pub.authors }}. {% endif %}<strong>{{ pub.title }}</strong>{% if pub.venue %}. <em>{{ pub.venue }}</em>{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}.{% if pub.link %} <a href="{{ pub.link }}" target="_blank" rel="noopener">Link</a>{% endif %}</li>
-        {% endfor %}
-      </ul></div>
+    <div class="wrap">
+      <h3>Selected Publications</h3>
+      <div class="card">
+        <ul class="clean">
+          {% for pub in site.data.publications %}
+          <li>{% if pub.authors %}{{ pub.authors }}. {% endif %}<strong>{{ pub.title }}</strong>{% if pub.venue %}. <em>{{ pub.venue }}</em>{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}.{% if pub.link %} <a href="{{ pub.link }}" target="_blank" rel="noopener">Link</a>{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </section>
- <section id="news" class="news-section">
-  <h2>News</h2>
-  {% assign items = site.data.news | sort: 'date' | reverse %}
-  {% for item in items %}
-    <details class="news-item">
-      <summary>
-        [{{ item.date }}] {{ item.title }}
-      </summary>
-      <p>{{ item.desc }}</p>
-      <p><a href="{{ item.link }}" target="_blank" rel="noopener">Read the article</a></p>
-    </details>
-  {% endfor %}
+
+  <section id="news" class="news-section">
+    <h2>News</h2>
+    {% assign items = site.data.news | sort: 'date' | reverse %}
+    {% for item in items %}
+      <details class="news-item">
+        <summary>[{{ item.date }}] {{ item.title }}</summary>
+        <p>{{ item.desc }}</p>
+        <p><a href="{{ item.link }}" target="_blank" rel="noopener">Read the article</a></p>
+      </details>
+    {% endfor %}
   </section>
+
   <section id="openings">
-    <div class="wrap"><h3>Open Positions</h3><div class="card">{{ site.data.lab.openings | default: "We welcome motivated MS/PhD students and collaborators. Email a brief CV and interests." }}</div></div>
+    <div class="wrap">
+      <h3>Open Positions</h3>
+      <div class="card">
+        {{ site.data.lab.openings | default: "We welcome motivated MS/PhD students and collaborators. Email a brief CV and interests." }}
+      </div>
+    </div>
   </section>
+
   <section id="contact">
     <div class="wrap grid cols-2">
-      <div class="card"><h3>Contact</h3>
-        <p><strong>Email:</strong> <a href="mailto:{{ site.data.lab.email }}">{{ site.data.lab.email }}</a><br/><strong>Department:</strong> {{ site.data.lab.department }}<br/><strong>Address:</strong> {{ site.data.lab.address }}</p>
+      <div class="card">
+        <h3>Contact</h3>
+        <p>
+          <strong>Email:</strong> <a href="mailto:{{ site.data.lab.email }}">{{ site.data.lab.email }}</a><br/>
+          <strong>Department:</strong> {{ site.data.lab.department }}<br/>
+          <strong>Address:</strong> {{ site.data.lab.address }}
+        </p>
       </div>
-      <div class="card"><h3>Links</h3><ul class="clean">{% for l in site.data.links %}<li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a></li>{% endfor %}</ul></div>
+      <div class="card">
+        <h3>Links</h3>
+        <ul class="clean">
+          {% for l in site.data.links %}
+          <li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </section>
-  <footer><div class="wrap">© <span id="year"></span> re-R Lab · Sunmoon University — Built with GitHub Pages <div>Edit <span class="kbd">_data/</span> & images in <span class="kbd">assets/uploads/</span>.</div></div></footer>
+
+  <footer>
+    <div class="wrap">
+      © <span id="year"></span> re-R Lab · Sunmoon University — Built with GitHub Pages
+      <div>Edit <span class="kbd">_data/</span> & images in <span class="kbd">assets/uploads/</span>.</div>
+    </div>
+  </footer>
+
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+

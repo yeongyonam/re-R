@@ -1,19 +1,29 @@
-- name: Prof. Yeongyo Nam
-  role: PI, Department of Physical Therapy
+- name: Yeongyo Nam
+  role: Professor · Principal Investigator
+  group: Principal Investigator
   meta: Neuroscience · Physical Therapy · Digital Health
   photo: "/assets/uploads/nam-profile.jpg"
 
 - name: SungYeon Oh
-  role: Ph.D. Student, Researcher
+  role: Ph.D. Student
+  group: PhD Students
   meta: Real-time data analysis for dementia · Research project planning · Development of digital therapeutics
   photo: "/assets/uploads/oh.jpg"
 
 - name: SeoHa Jeong
-  role: M.S. Student, Researcher
-  meta: Big data analysis of older adults · Clinical research in pediatric patients
+  role: M.S. Student
+  group: MS Students
+  meta: Big data analysis of older adults · Pediatric clinical research
   photo: "/assets/uploads/jung.jpg"
 
 - name: EunYoung Jeon
-  role: M.S. Student, Researcher
-  meta: Reliability and validity testing · Clinical research in pediatric patients
+  role: M.S. Student
+  group: MS Students
+  meta: Reliability and validity testing · Pediatric clinical research
   photo: "/assets/uploads/jeon.jpg"
+
+- name: JunHyun Park
+  role: Integrated BS–MS Student
+  group: Undergraduate Researchers
+  meta: Literature review · Research data organization · Experimental support
+  photo: "/assets/uploads/pjh.jpg"

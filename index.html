@@ -42,27 +42,12 @@ layout: null
     .brand h1{font-size:18px;line-height:1.2;margin:0}
     nav a{margin:0 10px;color:var(--muted);font-weight:600} nav a:hover{color:var(--ink)}
     .hero{
-  padding:100px 24px 80px;
-  background-image:url('./assets/uploads/hero-bg.png');
-
+  height:650px;
+  background-image:url('{{ "/assets/uploads/hero-bg.png" | relative_url }}');
   background-size:cover;
-  background-position:center;
+  background-position:center center;
   background-repeat:no-repeat;
 }
-
-.hero h2{
-  font-size:48px;
-  color:white;
-  font-weight:800;
-}
-
-.hero p{
-  color:rgba(255,255,255,0.92);
-  font-size:20px;
-}
-    .hero .wrap{max-width:1100px;margin:0 auto;}
-    .hero h2{font-size:40px;line-height:1.15;margin:0 0 12px}
-    .hero p{color:var(--muted);margin:0 0 18px}
     .cta{display:inline-block;background:var(--ink);color:white;padding:12px 18px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)}
     .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
     .grid{display:grid;gap:18px}
@@ -106,27 +91,79 @@ layout: null
   border-radius: 12px;
   object-fit: cover;
 }
-    /* Mobile Fix */
+/* ===== MOBILE FIX ===== */
 @media (max-width:768px){
 
-  .person{
+  .wrap{
+    max-width:100%;
+    width:100%;
+    padding:16px;
+    margin:0 auto;
+  }
+
+  header.site{
     flex-direction:column;
     align-items:center;
+    text-align:center;
+  }
+
+  .brand{
+    justify-content:center;
+  }
+
+  nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  nav a{
+    margin:0;
+    font-size:14px;
+  }
+
+  .hero{
+    height:220px;
+  }
+
+  .grid.cols-2,
+  .grid.cols-3{
+    grid-template-columns:1fr;
+  }
+
+  .people .wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .people h3,
+  .people h4{
+    width:100%;
+    text-align:center;
+  }
+
+  .person{
+    width:100%;
+    max-width:360px;
+    margin:0 auto;
     text-align:center;
   }
 
   .person > div{
     width:100%;
     min-width:0;
-    overflow-wrap:break-word;
+    overflow-wrap:anywhere;
     word-break:break-word;
   }
 
-  .person .muted{
-    display:block;
-    white-space:normal;
+  .avatar{
+    width:100%;
+    height:auto;
+    max-height:320px;
+    object-fit:cover;
   }
-
 }
   </style>
 </head>
@@ -136,16 +173,7 @@ layout: null
     <nav><a href="#about">About</a><a href="#research">Research</a><a href="#people">People</a><a href="#publications">Publications</a><a href="#news">News</a><a href="#contact">Contact</a></nav>
   </header>
 
-  <div class="hero">
-    <div class="wrap">
-      <div>
-        <h2>{{ site.data.lab.hero.title | default: "Digital Therapeutics for Rehabilitation" }}</h2>
-        <p>{{ site.data.lab.hero.subtitle | default: "Evidence-based DTx to improve function and QoL in older adults." }}</p>
-        <a class="cta" href="#contact">Join / Collaborate</a>
-        <div style="margin-top:10px" class="muted">📍 {{ site.data.lab.location | default: "Asan, Republic of Korea · Department of Physical Therapy" }}</div>
-      </div>
-    </div>
-  </div>
+  <div class="hero"></div>
 
   <section id="about">
     <div class="wrap grid cols-2">

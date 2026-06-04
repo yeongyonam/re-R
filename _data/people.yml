@@ -10,20 +10,20 @@
   meta: Real-time data analysis for dementia · Research project planning · Development of digital therapeutics
   photo: "/assets/uploads/oh.jpg"
 
-- name: SeoHa Jeong
-  role: M.S. Student
+- name: Minchan Kang
+  role: M.S. Student (Computer Engineering)
   group: MS Students
-  meta: Big data analysis of older adults · Pediatric clinical research
-  photo: "/assets/uploads/jung.jpg"
-
-- name: EunYoung Jeon
-  role: M.S. Student
-  group: MS Students
-  meta: Reliability and validity testing · Pediatric clinical research
-  photo: "/assets/uploads/jeon.jpg"
+  meta: App development · Cybersecurity · AI system development
+  photo: "/assets/uploads/kmc.jpg"
 
 - name: JunHyun Park
   role: Integrated BS–MS Student
-  group: Undergraduate Researchers
+  group: MS Students
   meta: Literature review · Research data organization · Experimental support
   photo: "/assets/uploads/pjh.jpg"
+
+- name: JinHyuk Eom
+  role: Undergraduate Research Assistant 
+  group: Undergraduate Researchers
+  meta: Test software development · App user manual design · Usability support
+  photo: "/assets/uploads/ejh.jpg"

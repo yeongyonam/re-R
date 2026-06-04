@@ -8,241 +8,101 @@ layout: null
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ site.title }} | Sunmoon University</title>
 
-  <!-- 기본 SEO -->
-  <meta name="description" content="선문대학교 물리치료학과 남연교 교수 연구실 · Digital Therapeutics, Rehabilitation, Cognitive Training">
-  <meta name="keywords" content="남연교, 선문대학교, 물리치료학과, 재활, Digital Therapeutics, Rehabilitation, Cognitive Training">
-  <meta name="author" content="남연교">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="남연교 교수 연구실 · re-R Project">
-  <meta property="og:description" content="선문대학교 물리치료학과 남연교 교수 연구실 · Digital Therapeutics & Rehabilitation">
-  <meta property="og:image" content="https://yeongyonam.github.io/re-R/assets/uploads/logo.png">
-  <meta property="og:url" content="https://yeongyonam.github.io/re-R/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="남연교 교수 연구실 · re-R Project">
-  <meta name="twitter:description" content="Digital Therapeutics & Rehabilitation">
-  <meta name="twitter:image" content="https://yeongyonam.github.io/re-R/assets/uploads/logo.png">
-
-  <!-- Google & Naver Verification -->
-  <meta name="google-site-verification" content="TNBSUoDc-UDpoSOAk6wVwKCnul1S4MwPYMVWaWok_H0" />
-  <meta name="naver-site-verification" content="f82ad5ed8e6677bbfcd099b5894f48bf7a2d6cb4" />
-
   <!-- 스타일 -->
   <style>
     :root{--bg:#fff;--ink:#0b1021;--muted:#5a637a;--brand:#2b6ef5;--surface:#f5f7fb;--card:#fff;--border:#e7ebf3;--radius:16px;--shadow:0 10px 30px rgba(11,16,33,0.08);--max:1100px;}
-    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.6}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui;}
+    a{color:var(--brand);text-decoration:none}
     .wrap{max-width:var(--max);margin:0 auto;padding:24px}
-    header.site{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 24px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(255,255,255,0.8);backdrop-filter:blur(8px);z-index:10}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#7aa6ff);display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:var(--shadow)}
-    .brand h1{font-size:18px;line-height:1.2;margin:0}
-    nav a{margin:0 10px;color:var(--muted);font-weight:600} nav a:hover{color:var(--ink)}
-    .hero{padding:64px 24px 32px;background:linear-gradient(180deg,#f7faff,transparent)}
-    .hero .wrap{display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px;align-items:center}
-    .hero h2{font-size:40px;line-height:1.15;margin:0 0 12px}
-    .hero p{color:var(--muted);margin:0 0 18px}
-    .cta{display:inline-block;background:var(--ink);color:white;padding:12px 18px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    section{padding:28px 24px} section h3{margin:0 0 10px;font-size:24px}
-    .muted{color:var(--muted)} ul.clean{padding-left:18px;margin:10px 0}
-    .pill{display:inline-block;border:1px solid var(--border);padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;color:var(--muted);font-weight:600}
-    .news-item{padding:12px 0;border-bottom:1px dashed var(--border)}
-    .people .person{display:flex;gap:14px;align-items:center}
-    .avatar{width:56px;height:56px;border-radius:50%;background:var(--surface);border:1px solid var(--border);object-fit:cover}
-    footer{border-top:1px solid var(--border);padding:28px 24px;color:var(--muted);font-size:14px}
-    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:var(--surface);border:1px solid var(--border);padding:2px 6px;border-radius:6px}
-    @media (max-width: 900px){ .hero .wrap{grid-template-columns:1fr} .grid.cols-3{grid-template-columns:1fr} .grid.cols-2{grid-template-columns:1fr} }
-/* People Grid Upgrade */
-.people .wrap {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-}
 
-.people h4 {
-  grid-column: 1 / -1;
-  margin-top: 30px;
-  font-size: 18px;
-  font-weight: 700;
-}
+    header.site{display:flex;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--border)}
+    .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#7aa6ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
 
-.person {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    /* 🔥 HERO 업그레이드 */
+    .hero{
+      padding:80px 24px 60px;
+      background:
+        linear-gradient(rgba(11,16,33,0.65), rgba(11,16,33,0.65)),
+        url('/assets/uploads/hero-bg.jpg');
+      background-size:cover;
+      background-position:center;
+      color:white;
+    }
+    .hero h2{font-size:42px;font-weight:800}
+    .hero p{color:rgba(255,255,255,0.85)}
 
-.person:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
+    .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px}
 
-.avatar {
-  width: 100%;
-  height: 220px;
-  border-radius: 12px;
-  object-fit: cover;
-}
+    /* 🔥 NEWS 프리미엄 */
+    .news-section{background:#f8fafc}
+    .news-item{
+      background:#fff;
+      border:1px solid #e7ebf3;
+      border-radius:16px;
+      padding:18px;
+      margin-bottom:14px;
+      transition:0.25s;
+    }
+    .news-item:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 40px rgba(0,0,0,0.08);
+    }
+    .news-item:first-child{
+      border:1.5px solid #2b6ef5;
+      background:linear-gradient(#f0f6ff,#fff);
+    }
+    .news-item summary{font-weight:700;cursor:pointer}
+    .news-item summary::-webkit-details-marker{display:none}
+    .news-item summary::after{
+      content:" NEW";
+      font-size:11px;
+      color:#2b6ef5;
+      font-weight:800;
+      margin-left:6px;
+    }
+
+    /* 🔥 PEOPLE 모바일 해결 */
+    .person{display:flex;gap:14px}
+    .person div{flex:1;word-break:keep-all}
+
+    @media(max-width:768px){
+      .person{
+        flex-direction:column;
+        text-align:center;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header class="site">
-    <div class="brand"><div class="logo" aria-hidden="true">re-R</div><h1>{{ site.title }} <span class="muted">· Sunmoon University</span></h1></div>
-    <nav><a href="#about">About</a><a href="#research">Research</a><a href="#people">People</a><a href="#publications">Publications</a><a href="#news">News</a><a href="#contact">Contact</a></nav>
-  </header>
 
-  <div class="hero">
-    <div class="wrap">
-      <div>
-        <h2>{{ site.data.lab.hero.title | default: "Digital Therapeutics for Rehabilitation" }}</h2>
-        <p>{{ site.data.lab.hero.subtitle | default: "Evidence-based DTx to improve function and QoL in older adults." }}</p>
-        <a class="cta" href="#contact">Join / Collaborate</a>
-        <div style="margin-top:10px" class="muted">📍 {{ site.data.lab.location | default: "Asan, Republic of Korea · Department of Physical Therapy" }}</div>
-      </div>
-      <div class="card">
-        <strong>Quick links</strong>
-        <ul class="clean">
-          <li><a href="#publications">Latest publications</a></li>
-          <li><a href="#projects">Ongoing projects</a></li>
-          <li><a href="#openings">Open positions</a></li>
-        </ul>
-        <div style="margin-top:8px">
-          {% for tag in site.data.lab.tags %}
-            <span class="pill">{{ tag }}</span>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+<header class="site">
+  <div style="display:flex;gap:10px;align-items:center">
+    <div class="logo">re-R</div>
+    <div>{{ site.title }}</div>
   </div>
+</header>
 
-  <section id="about">
-    <div class="wrap grid cols-2">
-      <div class="card">
-        <h3>About</h3>
-        <p>{{ site.data.lab.about | default: "re-R (Rehabilitation & Research) Lab advances digital therapeutics." }}</p>
-        <p class="muted">{{ site.data.lab.focus | default: "Focus: knee/neck/shoulder/back/hip DTx, adherence analytics, accessibility." }}</p>
-      </div>
-      <div class="card" id="projects">
-        <h3>Ongoing Projects</h3>
-        <ul class="clean">
-          {% for p in site.data.projects %}
-          <li><strong>{{ p.name }}</strong> — {{ p.desc }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="research">
-    <div class="wrap">
-      <h3>Research Areas</h3>
-      <div class="grid cols-3">
-        {% for a in site.data.areas %}
-        <div class="card"><strong>{{ a.title }}</strong><p class="muted">{{ a.text }}</p></div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-<section id="people" class="people">
+<div class="hero">
   <div class="wrap">
-    <h3>People</h3>
-
-    {% assign groups = site.data.people | group_by: "group" %}
-
-    {% for g in groups %}
-    <h4 style="margin-top:30px">{{ g.name }}</h4>
-
-    {% for person in g.items %}
-    <div class="card person">
-      {% if person.photo %}
-      <img class="avatar" src="{{ person.photo | relative_url }}" alt="{{ person.name }} photo"/>
-      {% else %}
-      <div class="avatar"></div>
-      {% endif %}
-
-      <div>
-        <strong>{{ person.name }}</strong> — {{ person.role }}<br/>
-        <span class="muted">{{ person.meta }}</span>
-      </div>
-    </div>
-    {% endfor %}
-
-    {% endfor %}
-
+    <h2>Digital Therapeutics for Rehabilitation</h2>
+    <p>Evidence-based DTx for older adults</p>
   </div>
-</section>
-
-  <section id="publications">
-    <div class="wrap">
-      <h3>Selected Publications</h3>
-      <div class="card">
-        <ul class="clean">
-          {% for pub in site.data.publications %}
-          <li>{% if pub.authors %}{{ pub.authors }}. {% endif %}<strong>{{ pub.title }}</strong>{% if pub.venue %}. <em>{{ pub.venue }}</em>{% endif %}{% if pub.year %}, {{ pub.year }}{% endif %}.{% if pub.link %} <a href="{{ pub.link }}" target="_blank" rel="noopener">Link</a>{% endif %}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </section>
+</div>
 
 <section id="news" class="news-section">
   <div class="wrap">
     <h3>News</h3>
     {% assign items = site.data.news | sort: 'date' | reverse %}
     {% for item in items %}
-      <details class="news-item">
+      <details class="news-item" {% if forloop.first %}open{% endif %}>
         <summary>[{{ item.date }}] {{ item.title }}</summary>
         <p>{{ item.desc }}</p>
-        <p><a href="{{ item.link }}" target="_blank" rel="noopener">Read the article</a></p>
+        <p><a href="{{ item.link }}" target="_blank">Read more →</a></p>
       </details>
     {% endfor %}
   </div>
 </section>
 
-  <section id="openings">
-    <div class="wrap">
-      <h3>Open Positions</h3>
-      <div class="card">
-        {{ site.data.lab.openings | default: "We welcome motivated MS/PhD students and collaborators. Email a brief CV and interests." }}
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap grid cols-2">
-      <div class="card">
-        <h3>Contact</h3>
-        <p>
-          <strong>Email:</strong> <a href="mailto:{{ site.data.lab.email }}">{{ site.data.lab.email }}</a><br/>
-          <strong>Department:</strong> {{ site.data.lab.department }}<br/>
-          <strong>Address:</strong> {{ site.data.lab.address }}
-        </p>
-      </div>
-      <div class="card">
-        <h3>Links</h3>
-        <ul class="clean">
-          {% for l in site.data.links %}
-          <li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.name }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap">
-      © <span id="year"></span> re-R Lab · Sunmoon University — Built with GitHub Pages
-      <div>Edit <span class="kbd">_data/</span> & images in <span class="kbd">assets/uploads/</span>.</div>
-    </div>
-  </footer>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-

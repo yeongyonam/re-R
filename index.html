@@ -191,8 +191,9 @@ layout: null
     </div>
   </section>
 
-  <section id="news" class="news-section">
-    <h2>News</h2>
+<section id="news" class="news-section">
+  <div class="wrap">
+    <h3>News</h3>
     {% assign items = site.data.news | sort: 'date' | reverse %}
     {% for item in items %}
       <details class="news-item">
@@ -201,7 +202,8 @@ layout: null
         <p><a href="{{ item.link }}" target="_blank" rel="noopener">Read the article</a></p>
       </details>
     {% endfor %}
-  </section>
+  </div>
+</section>
 
   <section id="openings">
     <div class="wrap">

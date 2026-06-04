@@ -41,8 +41,31 @@ layout: null
     .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--brand),#7aa6ff);display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:var(--shadow)}
     .brand h1{font-size:18px;line-height:1.2;margin:0}
     nav a{margin:0 10px;color:var(--muted);font-weight:600} nav a:hover{color:var(--ink)}
-    .hero{padding:64px 24px 32px;background:linear-gradient(180deg,#f7faff,transparent)}
-    .hero .wrap{display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px;align-items:center}
+    .hero{
+  padding:100px 24px 80px;
+  background:
+  linear-gradient(
+    rgba(4,20,55,0.72),
+    rgba(4,20,55,0.72)
+  ),
+  url('/assets/uploads/hero-bg.png');
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.hero h2{
+  font-size:48px;
+  color:white;
+  font-weight:800;
+}
+
+.hero p{
+  color:rgba(255,255,255,0.92);
+  font-size:20px;
+}
+    .hero .wrap{max-width:1100px;margin:0 auto;}
     .hero h2{font-size:40px;line-height:1.15;margin:0 0 12px}
     .hero p{color:var(--muted);margin:0 0 18px}
     .cta{display:inline-block;background:var(--ink);color:white;padding:12px 18px;border-radius:999px;font-weight:700;box-shadow:var(--shadow)}
@@ -103,19 +126,6 @@ layout: null
         <p>{{ site.data.lab.hero.subtitle | default: "Evidence-based DTx to improve function and QoL in older adults." }}</p>
         <a class="cta" href="#contact">Join / Collaborate</a>
         <div style="margin-top:10px" class="muted">📍 {{ site.data.lab.location | default: "Asan, Republic of Korea · Department of Physical Therapy" }}</div>
-      </div>
-      <div class="card">
-        <strong>Quick links</strong>
-        <ul class="clean">
-          <li><a href="#publications">Latest publications</a></li>
-          <li><a href="#projects">Ongoing projects</a></li>
-          <li><a href="#openings">Open positions</a></li>
-        </ul>
-        <div style="margin-top:8px">
-          {% for tag in site.data.lab.tags %}
-            <span class="pill">{{ tag }}</span>
-          {% endfor %}
-        </div>
       </div>
     </div>
   </div>

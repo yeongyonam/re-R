@@ -119,19 +119,21 @@ layout: null
     .area h4{font-family:var(--serif);font-weight:500;font-size:20px;color:var(--ink);margin-bottom:9px;}
     .area p{color:var(--muted);font-size:15.5px;margin:0;}
 
-    /* People (compact) */
-    .people-group{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--ink);margin:clamp(26px,3vw,40px) 0 18px;padding-bottom:12px;border-bottom:1px solid var(--line);}
-    .people-group:first-of-type{margin-top:6px;}
-    .people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,180px));gap:clamp(14px,1.6vw,20px);justify-content:start;}
-    .person{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow-xs);transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s ease;}
-    .person:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
-    .person .avatar{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 20%;background:var(--bg-alt);filter:grayscale(15%) contrast(1.02);transition:filter .35s ease,transform .5s ease;}
-    .person:hover .avatar{filter:grayscale(0%);transform:scale(1.04);}
-    .avatar--empty{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:34px;color:var(--muted);}
-    .pinfo{padding:13px 14px 16px;}
-    .pname{display:block;font-family:var(--serif);font-weight:500;font-size:16.5px;color:var(--ink);line-height:1.25;text-wrap:balance;}
-    .prole{display:block;color:var(--brand);font-size:12px;font-weight:600;letter-spacing:.02em;margin-top:3px;}
-    .pmeta{display:block;color:var(--muted);font-size:12px;line-height:1.45;margin-top:7px;}
+    /* People (centered horizontal profile cards) */
+    .people-head{text-align:center;margin-left:auto;margin-right:auto;}
+    .people-group{text-align:center;font-family:var(--serif);font-weight:500;font-size:21px;color:var(--ink);margin:clamp(28px,3.4vw,44px) 0 22px;}
+    .people-group::after{content:"";display:block;width:44px;height:2px;background:var(--brand);opacity:.5;margin:13px auto 0;border-radius:2px;}
+    .people-group:first-of-type{margin-top:8px;}
+    .people-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(16px,2vw,22px);}
+    .person{flex:1 1 360px;max-width:540px;display:flex;flex-direction:row;align-items:center;gap:18px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow-xs);transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s ease;}
+    .person:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+    .person .avatar{width:128px;height:160px;flex:0 0 auto;border-radius:var(--radius-sm);object-fit:cover;object-position:50% 18%;background:var(--bg-alt);filter:grayscale(15%) contrast(1.02);transition:filter .35s ease;}
+    .person:hover .avatar{filter:grayscale(0%);}
+    .avatar--empty{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:40px;color:var(--muted);}
+    .pinfo{flex:1;min-width:0;}
+    .pname{display:block;font-family:var(--serif);font-weight:500;font-size:19px;color:var(--ink);line-height:1.25;}
+    .prole{display:block;color:var(--brand);font-size:13px;font-weight:600;letter-spacing:.02em;margin-top:5px;}
+    .pmeta{display:block;color:var(--muted);font-size:13px;line-height:1.5;margin-top:10px;}
 
     /* Publications */
     .pub-list{list-style:none;margin:0;padding:0;}
@@ -210,6 +212,9 @@ layout: null
       .hero-wrap{padding:18px 16px 4px;}
       .hero{border-radius:14px;}
       .grid.cols-2,.grid.cols-3{grid-template-columns:1fr;}
+      .person{gap:14px;padding:14px;}
+      .person .avatar{width:104px;height:130px;}
+      .pname{font-size:18px;}
       .foot{flex-direction:column;align-items:flex-start;}
       .foot-note{text-align:left;}
       .callout{flex-direction:column;align-items:flex-start;}
@@ -277,7 +282,7 @@ layout: null
 
   <section id="people" class="section">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="sec-head people-head reveal">
         <span class="eyebrow">People</span>
         <h3>Our Team</h3>
       </div>
